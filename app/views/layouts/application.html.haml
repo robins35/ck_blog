@@ -6,6 +6,8 @@
   = javascript_include_tag 'application', 'data-turbolinks-track' => true
   = csrf_meta_tags
   %body
-    .notice= notice
-    .alert= alert
-    = yield
+    .container-fluid
+      .row
+        = render partial: 'shared/sidebar'
+        = render partial: 'shared/errors'
+        = render partial: 'shared/content_column'
